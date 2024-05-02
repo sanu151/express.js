@@ -8,14 +8,14 @@ app.get("/", (req, res) => {
   res.send("<h1>I am a get request from Home route</h1>");
 });
 app.use("/about", (req, res) => {
-  res.send({
+  res.json({
     name: "Supriyo Das",
     message: "Hi I am about Page",
     statusCode: 200,
   });
 });
 app.use("/contact", (req, res) => {
-  res.send("<h1>I am a get request from Contact route</h1>");
+  res.redirect("/about");
 });
 
 app.use((req, res) => {
