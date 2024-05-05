@@ -475,6 +475,8 @@ By following these steps and understanding these concepts, you can effectively h
 
 **`regular expression in express routing`**
 
+**JavaScript RegExp Reference :** https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+
 Regular expressions can be powerful tools for creating flexible route patterns in Express.js. Here's how you can use them within your routes:
 
 **1. Route Path with Regular Expression:**
