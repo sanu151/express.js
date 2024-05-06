@@ -604,3 +604,15 @@ By following these steps, you can effectively set up and use environment variabl
 
 PORT=3000
 
+- Step 5: Install dotenv package -> npm install dotenv
+
+- Step 6: require dotenv -> require('dotenv').config();
+
+- Step 7: Access the env variables form anywaere using process.env.VARIABLE_NAME
+
+  Example : process.env.PROT;
+
+- Optional: DotENV Extension - nice syntax highlighting in our .env files.
+
+**Middilware**
+
