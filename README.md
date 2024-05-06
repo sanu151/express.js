@@ -582,3 +582,25 @@ const port = process.env.PORT || 3000;
 
 By following these steps, you can effectively set up and use environment variables in your Express.js applications to manage configuration details and sensitive data securely.
 
+**environment variables**
+
+**`How to use .env variables?`**
+
+- Step 1: Create an .env file in the root directory.
+
+- Step 2: define environment variable(s) using uppercase letter and underscore if more than one word.
+
+  Example : PORT, DATABASE_URL
+
+- Step 3: Assign the values without double quotation and space
+
+> PORT=3000
+
+> DATABASE_URL=mongodb://myuser:mypassword@localhost:27017/mydatabase
+
+- Step 4: We can make a connent using #
+
+\# server port
+
+PORT=3000
+
