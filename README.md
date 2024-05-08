@@ -696,3 +696,71 @@ app.listen(PORT, () => {
 
 In conclusion, middleware is a versatile tool in Express.js that empowers you to create well-structured, maintainable, and secure applications by centralizing common tasks and managing the request-response flow effectively.
 
+**Static Middleware**
+
+In Express.js, `express.static` is a built-in middleware function that serves static files (like images, CSS, JavaScript, etc.) from a specified directory within your application. It's a convenient way to handle static content requests without having to write custom route handlers for each file.
+
+**Here's a breakdown of how to use `express.static`:**
+
+**1. Usage:**
+
+```javascript
+app.use(express.static(rootDirectory));
+```
+
+* `app`: The Express application instance.
+* `express.static`: The built-in middleware function.
+* `rootDirectory`: The path to the directory containing your static files (relative to your server.js file or absolute path).
+
+**2. Functionality:**
+
+* When a request arrives for a URL that matches a static file (e.g., `http://localhost:3000/images/logo.png`), Express looks for the corresponding file within the directory specified in `express.static`.
+* If the file exists, it's read from the disk and sent as the response to the client.
+* Express sets appropriate headers (e.g., `Content-Type`) based on the file type.
+* If the file is not found, Express typically passes the request on to the next middleware in the chain (if any).
+
+**3. Benefits:**
+
+* **Simple Setup:** Easy to configure and use for serving static content.
+* **Improved Performance:** Static files are served directly from disk, reducing server load for generating dynamic content.
+* **Flexibility:** You can mount the static directory at any path within your application using the middleware.
+
+**4. Example:**
+
+```javascript
+const express = require('express');
+const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+// Your route handlers for dynamic content here
+
+app.listen(3000, () => console.log('Server listening on port 3000'));
+```
+
+**5. Additional Considerations:**
+
+* You can configure options for `express.static` to specify things like caching behavior or custom root directory handling. Refer to the Express.js documentation for more details ([https://expressjs.com/en/starter/static-files.html](https://expressjs.com/en/starter/static-files.html)).
+* For advanced use cases, you might consider alternative static file serving solutions like serving from a CDN (Content Delivery Network) for better performance and scalability.
+
+In essence, `express.static` is a valuable tool in your Express.js toolbox for efficiently managing and serving static assets within your web application.
+
+**MVC Architecture**
+
+**MVC** -> Model, View, Controller
+
+**What is MVC**
+
+* *Separation of Concrens (Which part is responsible for what)*
+
+* Models (details of database)
+
+* Views (what users sees)
+
+* Routes
+
+* Controllers (Connection point between model and views)
+
+* Controllers have all the logic
+
