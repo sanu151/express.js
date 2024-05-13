@@ -769,3 +769,6 @@ In essence, `express.static` is a valuable tool in your Express.js toolbox for e
 CORS is a mechanism that *allows restricted resources* on a web page to be requested from another domain outside the domain from which the first resource was served.
 
 ![image](https://github.com/sanu151/express.js/assets/68671274/b226f952-eb8b-4195-8fbd-21f35bc483d0)
+
+CORS is a security mechanism employed by browsers to prevent the browsers from making calls to another Website. A request for a resource outside of the origin is known as a *cross-origin request*. CORS is a specification that manages cross-origin requests.
+
